@@ -25,7 +25,7 @@ COPY app.py .
 ENV PATH=/root/.local/bin:$PATH
 
 # Run as non-root
-USER appuser
+#USER appuser
 
 EXPOSE 5000
 CMD ["python", "app.py"]
