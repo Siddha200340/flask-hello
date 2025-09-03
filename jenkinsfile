@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo "Running container for testing..."
                 bat 'docker run -d --name test-container -p 5001:5000 %IMAGE_NAME%:latest'
-                bat 'timeout /t 5'
+                bat 'docker ps'
                 bat 'curl http://localhost:5001'
                 bat 'docker rm -f test-container'
             }
